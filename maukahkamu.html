@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- 
+  Original template by feeldreams & malas.id
+  Modified & Customized by mrjansss
+-->
+<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script><link href="https://feeldreams.github.io/maukahkamu/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  
+<head>
+<!-- Modified by mrjansss -->
+<title>Mau Kah Kamu - mrjansss</title>
+<link rel="icon" type="image/x-icon" href="https://malasid.github.io/favicon.png">
+<meta name="description" content="Customized by mrjansss">
+<style>
+/* Hide copyright watermark */
+body::before,
+body::after,
+section::before,
+section::after,
+.overlay::before,
+.overlay::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Hide any element with copyright text */
+[class*="credit"],
+[class*="copyright"],
+[id*="credit"],
+[id*="copyright"] {
+    display: none !important;
+}
+
+/* Additional override for watermark positioned elements */
+body > div:first-child:not(.overlay) {
+    display: none !important;
+}
+</style>
+</head>
+<body>
+	
+   <div class="overlay">
+     <div class="loading-message">Hai kamu!<br>Tunggu dulu ya..</div>
+   </div>
+
+   <audio src="confess.mpeg" id="linkmp3" class="sembunyi"></audio>
+   
+   <section class="first">
+       <div class="wp"><img id="imgsatu" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"/></div>
+       <img id="first_stiker" class="stiker fade-in" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&q=80"/>
+       <h1 class="title">Hei Flora!</h1>
+       <p class="flip">Mau jujur nih? ☺️</p>
+       <p class="slide-up"><i>Scroll terus ke bawah ya :)</i></p>
+  </section>
+  
+  <section>
+      <div class="wp"><img id="imgdua" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=80"/></div>
+      <img class="stiker fade-in" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&q=80"/>
+      <h2 class="title"><i>Sebenernya..</i></h2>
+      <p class="slide-right">Bt suka Se, <b class="lingkar">se pasti jua su tau sih</b> :(</p>
+  </section>
+  
+  <section>
+  	<div class="wp"><img id="imgtiga" src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=1200&q=80"/></div>
+      <p id="teksnimasi">Kalo se tanya kenapa bt suka se, nah bt suka se tuh karna yg pertama se manis jir, yg kedua suka bola apalagi negara dan club yg se fans paling langkah coy, berbeda banget dari wanita yg lain apalagi rambutmu itu pele gaga skali kah<br><br><b><i>Se Tau?</i></b><br>walaupun ktng beda genre lagu tapi bt mau mencoba denger playlist kamu sih biar kita berdua sefrekuensi hahaha.. apalah<br><br>dan yg terpenting dari pada yg lain adalah, kita berdua seagama anjirrr exited bgt pen nyobain datting religius wkwk</p>
+  </section>
+  
+  <section>
+  	<div class="wp"><img id="imgempat" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80"/></div>
+      <img class="stiker fade-in" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80"/>
+      <h2 class="title"><i>Intinya,</i></h2>
+      <p class="slide-right"><b>Se mau sg<br>Jadi bt cewe? ❤️</b></p>
+      <div id="Tombol">
+       <a id="By" onClick="fungsimau()">Mau 💕</a>
+       <a id="Bn" onMouseOver="pindahTombol()">sg mau 😢</a>
+     </div>
+  </section>
+  
+  <section id="iniakhir">
+  	<div class="wp" id="wpakhir"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80"/></div>
+      <img id="stikerakhir" class="stiker fade-in" src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=400&q=80"/>
+      <img id="stikerakhir2" style="display:none" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80"/>
+      <h1 id="judulakhir"></h1>
+      <p id="kalimatakhir"></p>
+      <p id="palingakhir"></p>
+      <div id="TombolWA">
+       <a onClick="menuju()">Balas 💌</a>
+     </div>
+  </section>
+  
+  <div id="initom" class="menu">
+  <a class='tombol' onclick="tes()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/> </svg>
+  </a>
+  </div>
+
+<script>
+function fungsimau(){
+       fungsi=0;tes();
+       teksjudulakhir = "Yeayyy! 🥳";
+       tekskalimatakhir = "Makasii udah mau nerima<br>aku jadi pacar kamu, hihi 🤭❤️";
+}
+function fungsigamau(){
+       fungsi=0;tes();
+       teksjudulakhir = "Yahhh 😫";
+       tekskalimatakhir = "Yaudah kalo kamu gamau,<br>biar aku aja yang jadi<br>pacar kamu, hehe 😆❤️";
+}
+
+function pindahTombol(){
+       var tombolGamau = document.getElementById('Bn');
+       
+       // Pindah kiri atau kanan secara random
+       var randomMove = Math.random() > 0.5 ? 150 : -150;
+       
+       // Set transform untuk pindah posisi
+       tombolGamau.style.transform = 'translateX(' + randomMove + 'px)';
+       tombolGamau.style.transition = 'all 0.3s ease';
+       
+       // Reset posisi setelah 1 detik biar bisa dicoba lagi
+       setTimeout(function(){
+           var newMove = Math.random() > 0.5 ? 150 : -150;
+           tombolGamau.style.transform = 'translateX(' + newMove + 'px)';
+       }, 400);
+}
+
+teksjudulakhir2 = "I Love You";
+tekspalingakhir = "Jangan lupa balas pesan<br>ke WhatsApp aku ya! ✨";
+  
+pesanwhatsapp = "iya jans kita pacaran";
+nomorwa = "081340089147";
+
+function menuju(){
+    var pesan = encodeURIComponent(pesanwhatsapp);
+    var nomor = nomorwa.replace(/[^0-9]/g, ''); // Hapus karakter non-angka
+    if(nomor.startsWith('0')) {
+        nomor = '62' + nomor.substring(1); // Ubah 0 jadi 62 untuk format internasional
+    }
+    window.open('https://api.whatsapp.com/send?phone=' + nomor + '&text=' + pesan, '_blank');
+}
+
+const body = document.querySelector("body"); initom.style="opacity:0;bottom:0;transition:none"; audio = new Audio('' + linkmp3.src); function berjatuhan() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
+
+// Aggressive copyright removal
+function hapusCopyright() {
+    var allElements = document.querySelectorAll('*');
+    allElements.forEach(function(el){
+        var text = el.textContent || el.innerText || '';
+        // Cek apakah elemen berisi copyright text
+        if(text.includes('Rayys') || text.includes('feelthisray') || text.includes('©') || 
+           text.includes('Rayus') || text.includes('feeldreams') || text.includes('malasid')) {
+            // Jika elemen kecil (kemungkinan cuma copyright), hide
+            if(text.length < 100) {
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+                el.style.opacity = '0';
+                el.remove(); // langsung hapus dari DOM
+            }
+        }
+        
+        // Cek background image yang mungkin berisi watermark
+        var bgImage = window.getComputedStyle(el).backgroundImage;
+        if(bgImage && (bgImage.includes('credit') || bgImage.includes('watermark'))) {
+            el.style.backgroundImage = 'none';
+        }
+    });
+}
+
+// Jalankan berkali-kali untuk memastikan
+setTimeout(hapusCopyright, 100);
+setTimeout(hapusCopyright, 500);
+setTimeout(hapusCopyright, 1000);
+setTimeout(hapusCopyright, 2000);
+setInterval(hapusCopyright, 3000); // Setiap 3 detik
+
+</script>
+<script src="https://malasid.github.io/html/maukahkamu.js"></script>
+</body>
+</html>
