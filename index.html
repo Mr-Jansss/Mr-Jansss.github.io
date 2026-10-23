@@ -94,7 +94,7 @@ body > div:first-child:not(.overlay) {
       <p id="kalimatakhir"></p>
       <p id="palingakhir"></p>
       <div id="TombolWA">
-       <a onClick="menuju()">Balas 💌</a>
+       <a onClick="menujuNomor()">Balas 💌</a>
      </div>
   </section>
   
@@ -139,7 +139,7 @@ tekspalingakhir = "Jangan lupa balas pesan<br>ke WhatsApp aku ya! ✨";
 pesanwhatsapp = "iya jans kita pacaran";
 nomorwa = "081340089147";
 
-function menuju(){
+function menujuNomor(){
     var pesan = encodeURIComponent(pesanwhatsapp);
     var nomor = nomorwa.replace(/[^0-9]/g, '');
     if(nomor.startsWith('0')) {
